@@ -1,10 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const { response } = require("express");
+require("dotenv").config();
 
-const stripe = require("stripe")(
-  "sk_test_51KM40WSGSwiG5OthUwlqtXEmwDLyC53VlYedsKT7Pc6GrHmgTN5Sh7r8Se1EUDcORGmoGwm0ZVZahk07ABudy3nB008wPzdP6m"
-);
+const stripe = require("stripe")(process.env.API_KEY);
 
 // API
 
